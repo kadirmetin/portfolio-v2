@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("/fonts/SourceCodePro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("/fonts/SourceCodePro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("/fonts/SourceCodePro-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("/fonts/SourceCodePro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #eeeeee;
+  --secondary-color: #20c20e;
+}
+
+body {
+  background-color: #222222;
+  font-family: "Source Code Pro", monospace;
+  color: var(--primary-color);
+}
+
+.content {
+  max-width: 81ch;
+  width: 100%;
+  padding: 20px;
+  margin: 30px auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1em 0;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+a {
+  color: var(--secondary-color);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li:not(:last-child)::after {
+  content: " |";
+  margin-left: 5px;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+}
+
+.main {
+  margin-bottom: 15%;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
